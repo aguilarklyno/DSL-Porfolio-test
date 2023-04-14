@@ -1,7 +1,8 @@
+import { client } from 'libs/client'
 import Head from 'next/head'
 
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
       <Head>
@@ -11,8 +12,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        
+        sssss
       </main>
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const data = await client.get({
+    endpoint: 'portfolio',
+    queries: {
+    },
+  })
+
+  return {
+    props: {
+      data: data.contents,
+    },
+  }
 }
