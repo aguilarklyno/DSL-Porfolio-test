@@ -74,12 +74,12 @@ export default function BlogId({ data, products }) {
         <Title title="History" />
         <Title title="Products" />
         <Products products={products} />
-        {/* <div
+        <div
           className=''
           dangerouslySetInnerHTML={{
             __html: `${data.description}`,
           }}
-        /> */}
+        />
       </div>
     </main>
   )
