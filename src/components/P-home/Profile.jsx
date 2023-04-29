@@ -5,7 +5,7 @@ export default function Profile({ data }) {
   return (
     <div className='flex felx-col justify-center items-center'>
       <h1 className='' >
-        {data.name}
+        {data.nameJaLast}{data.nameJaFirst}
       </h1>
     </div>
   )

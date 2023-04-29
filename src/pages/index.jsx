@@ -1,10 +1,12 @@
 import Member from '@/components/P-home/Member'
+import ProductsAll from '@/components/P-home/ProductsAll'
 import Profile from '@/components/P-home/Profile'
+import Products from '@/components/P-portfolio/Products'
 import Title from '@/components/atoms/Title'
 import { client } from 'libs/client'
 import Head from 'next/head'
 
-export default function Home({ data }) {
+export default function Home({ data, products }) {
   return (
     <>
       <Head>
@@ -19,9 +21,9 @@ export default function Home({ data }) {
             Welcome to DSL portfolio. This is a portfolio site for DSL members.
           </p>
         <Title title="Members" />
-        <Profile data={data} />
         <Member data={data}/>
         <Title title="All Products" />
+        <ProductsAll products={products}/>
       </main>
     </>
   )
@@ -30,14 +32,17 @@ export default function Home({ data }) {
 export const getStaticProps = async () => {
   const data = await client.get({
     endpoint: 'portfolio',
-    queries: {
+    queries: {},
+  })
 
-    },
+  const products = await client.get({
+    endpoint: 'products',
   })
 
   return {
     props: {
       data: data.contents,
+      products: products.contents,
     },
   }
 }

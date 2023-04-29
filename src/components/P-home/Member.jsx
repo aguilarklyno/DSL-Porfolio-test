@@ -28,7 +28,7 @@ export default function Member({ data }) {
               />
             </Link>
             <p className="text-[0.6rem] py-1">
-              {content.nameJa}
+              {content.nameJaLast}{content.nameJaFirst}
             </p>
             <p className='text-[0.6rem] '>
               {content.nameEn}
