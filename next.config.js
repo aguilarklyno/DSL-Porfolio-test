@@ -8,7 +8,7 @@ module.exports = {
   images: {
     domains: ["localhost", "images.microcms-assets.io"],
     loader: "imgix",
-    path: "https://images.microcms-assets.io/assets/",
+    path: "https://images.microcms-assets.io/assets/**",
   },
 }
 
