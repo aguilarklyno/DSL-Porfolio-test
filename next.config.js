@@ -4,17 +4,11 @@ const nextConfig = {
 }
 
 module.exports = {
+  ...nextConfig,
   images: {
-    images: {
-      domains: ["localhost"],
-    },
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.microcms-assets.io',
-        port: '',
-        pathname: '/assets/**',
-      },
-    ],
+    domains: ["localhost", "images.microcms-assets.io"],
+    loader: "imgix",
+    path: "https://images.microcms-assets.io/assets/",
   },
 }
+

@@ -31,7 +31,9 @@ export default function Home({ data }) {
 export const getStaticProps = async () => {
   const data = await client.get({
     endpoint: 'portfolio',
-    queries: {},
+    queries: {
+      
+    },
   })
 
   return {
