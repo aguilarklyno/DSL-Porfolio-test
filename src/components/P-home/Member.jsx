@@ -14,7 +14,7 @@ export default function Member({ data }) {
             >
               <Image
                 src={content.image.url}
-                className="rounded-full border-2 border-white "
+                className="rounded-full border-2 border-white img-hover-scale"
                 alt=""
                 fill
                 contain
@@ -27,10 +27,10 @@ export default function Member({ data }) {
                 }}
               />
             </Link>
-            <p className="text-[0.6rem] py-1">
+            <p className="text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] lg:text-[0.9rem] xl:text-[1rem] py-[2px]">
               {content.nameJaLast}{content.nameJaFirst}
             </p>
-            <p className='text-[0.6rem] '>
+            <p className='text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] lg:text-[0.9rem] '>
               {content.nameEn}
             </p>
           </div>

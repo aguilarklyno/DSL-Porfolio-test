@@ -17,7 +17,7 @@ export default function Products({ products, data }) {
             <div className="relative w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 m-auto">
               <Image
                 src={product.image.url}
-                className="border-2 border-white rounded-xl"
+                className="border-2 border-white rounded-xl img-hover-scale"
                 alt=""
                 fill
                 contain
