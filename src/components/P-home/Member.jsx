@@ -31,7 +31,7 @@ export default function Member({ data }) {
               {content.nameJaLast}{content.nameJaFirst}
             </p>
             <p className='text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] lg:text-[0.9rem] '>
-              {content.nameEn}
+              {content.nameEn} 
             </p>
           </div>
         )
