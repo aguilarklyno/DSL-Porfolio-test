@@ -14,15 +14,7 @@ export default function Products({ products }) {
                 contain
                 cover
                 fill
-                // width={200}
-                // height={200}
                 sizes="100vw"
-                // style={{
-                //   width: '100%',
-                //   position: 'center',
-                //   height: 'aspect-ratio',
-                //   overflow: 'hidden',
-                // }}
                 className='object-contain'
               />
             </div>

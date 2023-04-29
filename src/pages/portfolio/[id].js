@@ -106,7 +106,6 @@ export const getStaticProps = async (context) => {
 
   const products = await client.get({
     endpoint: 'products',
-    // contentId: id,
   })
 
   return {

@@ -7,9 +7,6 @@ export default function Profile({ data }) {
       <h1 className='' >
         {data.name}
       </h1>
-      {/* <Image
-        
-      /> */}
     </div>
   )
 }

@@ -13,7 +13,7 @@ export default function Home({ data }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="pt-32 m-auto w-4/5 sm:w-3/4 md:w-[66%] lg:w-3/5 flex flex-col justify-center items-center max-w-[40rem]">
+      <main className="pt-32 m-auto w-4/5 sm:w-3/4 md:w-[66%] lg:w-3/5 min-h-screen flex flex-col justify-center items-center max-w-[40rem]">
         <Title title="Description" />
           <p>
             Welcome to DSL portfolio. This is a portfolio site for DSL members.
@@ -21,8 +21,7 @@ export default function Home({ data }) {
         <Title title="Members" />
         <Profile data={data} />
         <Member data={data}/>
-        <Title title="Products" />
-        <Title title="Products" />
+        <Title title="All Products" />
       </main>
     </>
   )
@@ -32,7 +31,7 @@ export const getStaticProps = async () => {
   const data = await client.get({
     endpoint: 'portfolio',
     queries: {
-      
+
     },
   })
 
