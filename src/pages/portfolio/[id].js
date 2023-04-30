@@ -28,6 +28,7 @@ export default function BlogId({ data, products }) {
           <p>{data.nameJaLast}{data.nameJaFirst}</p>
           <p className="text-sm">{data.nameEn}</p>
           <p className="text-xs">{data.status}</p>
+          <p className="text-xs">{data.school}</p>
           <p className="w-[90%] py-3 sm:p-4 text-sm">{data.description}</p>
         </div>
         <Title title="Links" />
